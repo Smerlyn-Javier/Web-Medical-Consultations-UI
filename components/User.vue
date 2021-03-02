@@ -1,7 +1,7 @@
 <template>
   <div class="user-container">
     <div class="user-name">
-      <h3>joselito antonio</h3>
+      <h3>Smerlyn Javier Eusebio B.</h3>
     </div>
     <div class="user-image">
       <img

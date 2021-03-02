@@ -17,7 +17,7 @@
       <div class="content-container">
         <div class="searche-container">
           <h1>SELECCIONE SU SINTOMA 🩺</h1>
-          <Search/>
+          <!-- <Search/> -->
           <Symtom/>
 
           <img class="corazon" src="~/assets/corazon.png" alt="">
@@ -59,6 +59,9 @@ export default {
 </script>
 
 <style scoped>
+body{
+  background-color: #FAFDFE;
+}
 .home-container {
   display: grid;
   grid-template-columns: 20% 80%;
