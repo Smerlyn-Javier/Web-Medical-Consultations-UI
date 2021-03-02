@@ -27,7 +27,7 @@
 
           <el-menu-item index="4">
             <i class="el-icon-setting"></i>
-            <span>Navigator Four</span>
+            <span>Registros</span>
           </el-menu-item>
 
 
