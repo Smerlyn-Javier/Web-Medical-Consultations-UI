@@ -15,7 +15,20 @@
       <!-- TOP -->
       <!-- CONTENT -->
       <div class="content-container">
-        <h1>content</h1>
+        <div class="searche-container">
+          <h1>SELECCIONE SU SINTOMA 🩺</h1>
+          <Search/>
+          <Symtom/>
+
+          <img class="corazon" src="~/assets/corazon.png" alt="">
+          <img class="pulso" src="~/assets/pulso.png" alt="">
+
+            <el-button type="warning" round>Iniciar Consulta</el-button>
+
+        </div>
+        <div class="chat-container">
+
+        </div>
       </div>
       <!-- CONTENT -->
     </div>
@@ -27,11 +40,16 @@
 import NavMenu from '~/components/NavMenu'
 import Logo from '~/components/Logo'
 import User from '~/components/User'
+import Search from '~/components/Search'
+import Symtom from '~/components/Symtom'
+
 export default {
   components:{
      NavMenu,
      Logo,
-     User
+     User,
+     Search,
+     Symtom
   }
 
 
@@ -60,7 +78,34 @@ export default {
 }
 
 .content-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
   background-color: bisque;
   height: 100vh;
 }
+
+.searche-container{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  background-color: red;
+  text-align: center;
+}
+
+.chat-container{
+  padding: 20px;
+  background-color: blue;
+}
+
+.corazon{
+  margin: 20px auto;
+  width: 50%;
+}
+.pulso{
+  margin-bottom: 20px;
+  margin: 0px auto;
+  width: 50%;
+}
+
 </style>
