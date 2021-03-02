@@ -14,6 +14,7 @@
 .logo-container{
   display: flex;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .name{

@@ -64,7 +64,8 @@ export default {
   grid-template-columns: 20% 80%;
 }
 .lef-container {
-  background-color: azure;
+  border-right: 2px solid #F0F4F9;
+
 }
 
 .center-container{
@@ -75,14 +76,15 @@ export default {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
-  background-color: grey;
+
   height: 112px;
+  border-bottom: 2px solid #F0F4F9;
 }
 
 .content-container {
   display: grid;
   grid-template-columns: 50% 50%;
-  background-color: bisque;
+
   height: 100vh;
 }
 
@@ -91,13 +93,14 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 100px;
-  background-color: red;
+
+  border-right: 2px solid #F0F4F9;
   text-align: center;
 }
 
 .chat-container{
   padding: 20px;
-  background-color: blue;
+
 }
 
 .corazon{

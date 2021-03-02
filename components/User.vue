@@ -15,9 +15,9 @@
 <style>
 .user-container {
   width: 300px;
-  background-color: red;
+
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .user-image {
