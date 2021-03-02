@@ -11,6 +11,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
     "core-js": "^3.8.3",
+    "element-theme-chalk": "^2.15.1",
+    "element-ui": "^2.15.1",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
