@@ -27,7 +27,7 @@
 
         </div>
         <div class="chat-container">
-
+            <Chat/>
         </div>
       </div>
       <!-- CONTENT -->
@@ -42,6 +42,7 @@ import Logo from '~/components/Logo'
 import User from '~/components/User'
 import Search from '~/components/Search'
 import Symtom from '~/components/Symtom'
+import Chat from '~/components/Chat'
 
 export default {
   components:{
@@ -49,7 +50,8 @@ export default {
      Logo,
      User,
      Search,
-     Symtom
+     Symtom,
+     Chat
   }
 
 
