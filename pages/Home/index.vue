@@ -23,7 +23,7 @@
           <img class="corazon" src="~/assets/corazon.png" alt="">
           <img class="pulso" src="~/assets/pulso.png" alt="">
 
-            <el-button type="warning" round>Iniciar Consulta</el-button>
+            <el-button type="warning" @click="consultar" round>Iniciar Consulta</el-button>
 
         </div>
         <div class="chat-container">
@@ -43,7 +43,7 @@ import User from '~/components/User'
 import Search from '~/components/Search'
 import Symtom from '~/components/Symtom'
 import Chat from '~/components/Chat'
-
+import Swal from 'sweetalert2'
 export default {
   components:{
      NavMenu,
@@ -52,6 +52,42 @@ export default {
      Search,
      Symtom,
      Chat
+  },
+  methods:{
+    consultar(){
+        Swal.fire({
+  title: 'Selecciones el nombre de su medico',
+  input: 'text',
+  inputAttributes: {
+    autocapitalize: 'off'
+  },
+  showCancelButton: true,
+  confirmButtonText: 'Buscar',
+  showLoaderOnConfirm: true,
+  preConfirm: (login) => {
+    return fetch(`//api.github.com/users/${login}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+        return response.json()
+      })
+      .catch(error => {
+        Swal.showValidationMessage(
+          `Fallo la perticion su medico no fue encontrado: ${error}`
+        )
+      })
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: `${result.value.login} le atendera en unos minutos ...`,
+      imageUrl: result.value.avatar_url
+    })
+  }
+})
+    }
   }
 
 

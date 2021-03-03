@@ -17,6 +17,7 @@
 </template>
 <script>
 import {LoginUser} from '../../services/login.service'
+
 export  default {
   name: "login",
   data() {
@@ -41,12 +42,15 @@ export  default {
       }
 
 
+
+
     }
   }
 };
 </script>
 <style>
 .form{
+   border-radius: 8px;
   max-width: 300px;
   margin: 100px auto;
   padding: 10px;
@@ -54,5 +58,15 @@ export  default {
   grid-template-columns: 100%;
   justify-content: center;
   background-color: bisque;
+  height: 150px;
+}
+.user-name{
+height: 30px;
+}
+.password{
+  height: 30px;
+}
+.send-button{
+  margin: 0 auto;
 }
 </style>
